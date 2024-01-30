@@ -27,7 +27,7 @@ body {
 }
 
 #second-hand {
-  height: 130px;
+  height: 140px;
   width: 2px;
   background-color: rgb(222, 22, 22);
   transform: rotate(-90deg);
@@ -35,14 +35,14 @@ body {
 }
 
 #minute-hand {
-  height: 100px;
+  height: 120px;
   width: 3px;
   background-color: #25dd00;
  
 }
 
 #hour-hand {
-  height: 90px;
+  height: 100px;
   width: 5px;
   background-color: blanchedalmond;
   transform: rotate(-90deg);
@@ -79,3 +79,68 @@ body {
   top: 50%;
   left: 7%;
 }
+
+.centerDot{
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 100%;
+  border-color: red;
+  border-width: 10px;
+  background-color: beige;
+  position: absolute;
+  top: 48%;
+  left: 47%;
+  z-index: 1;
+}
+
+
+#buttons .play {
+  position: absolute;
+  top: 140%;
+  left: 20%;
+  margin-right: 10px; /* Add margin to separate the buttons */
+  z-index: 1;
+  background: linear-gradient(to right, #373b44, #4286f4);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #f3f3f3;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#buttons .pause{
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  margin-right: 10px; /* Add margin to separate the buttons */
+  z-index: 1;
+  background: linear-gradient(to right, #373b44, #4286f4);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #f3f3f3;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+  
+
+/* #buttons .pause, #buttons .play{
+  position: absolute;
+  top: 170%;
+  left: 30%;
+  z-index: 1;
+  background: linear-gradient(to right, #373b44, #4286f4);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #f3f3f3;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+} */
+
+
