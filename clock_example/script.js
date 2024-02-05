@@ -19,13 +19,20 @@ let initiateClock = function () {
         //         hourHand.style.transform = "rotate(" + ((hours % 12) * 30 - 90) + "deg)";
         //     }
         // }
-        let d = new Date(); 
+        let d = new Date();
         let hr = d.getHours();
         let min = d.getMinutes();
         let sec = d.getSeconds();
-        let hr_rotation = 30 * hr + min / 2; //converting current time
-        let min_rotation = 6 * min;
-        let sec_rotation = 6 * sec;
+        // let hr_rotation = 30 * hr + min / 2; //converting current time
+        // let min_rotation = 6 * min;
+        // let sec_rotation = 6 * sec;
+
+        // hourHand.style.transform = `rotate(${hr_rotation}deg)`;
+        // minuteHand.style.transform = `rotate(${min_rotation}deg)`;
+        // secondHand.style.transform = `rotate(${sec_rotation}deg)`;
+        const hr_rotation = (hr % 12) * 30 + min / 2;
+        const min_rotation = min * 6 + sec / 10;
+        const sec_rotation = sec * 6;
 
         hourHand.style.transform = `rotate(${hr_rotation}deg)`;
         minuteHand.style.transform = `rotate(${min_rotation}deg)`;
