@@ -1,144 +1,154 @@
+
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, #373b44, #4286f4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #373b44, #4286f4);
 }
 
 .clock-container {
-    height: 300px;
-    width: 300px;
-    border: 10px solid #f3f3f3;
-    border-radius: 50%;
-    position: relative;
-    box-shadow: 0px 0px 30px #888;
+  height: 300px;
+  width: 300px;
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0px 0px 30px #888;
 }
 
 #second-hand,
 #minute-hand,
 #hour-hand {
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    transform-origin: bottom;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
 }
 
 #second-hand {
-    height: 140px;
-    width: 2px;
-    background-color: rgb(222, 22, 22);
-    transform: rotate(-90deg);
-    z-index: 1;
+  height: 140px;
+  width: 2px;
+  background-color: rgb(222, 22, 22);
+  transform: rotate(-90deg);
+  z-index: 1;
 }
 
 #minute-hand {
-    height: 120px;
-    width: 3px;
-    background-color: #25dd00;
+  height: 120px;
+  width: 3px;
+  background-color: #25dd00;
+ 
 }
 
 #hour-hand {
-    height: 100px;
-    width: 5px;
-    background-color: blanchedalmond;
-    transform: rotate(-90deg);
+  height: 100px;
+  width: 5px;
+  background-color: blanchedalmond;
+  transform: rotate(-90deg);
+ 
 }
 
 .number {
-    position: absolute;
-    height: 1em;
-    width: 1em;
-    font-weight: bold;
-    text-align: center;
-    color: #f3f3f3;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  height: 1em;
+  width: 1em;
+  /* font-size: 3vw; */
+  font-weight: bold;
+  text-align: center;
+  color: #f3f3f3;
+  transform: translate(-50%, -50%);
 }
 
 .number.twelve {
-    top: 7%;
-    left: 50%;
+  top: 7%;
+  left: 50%;
 }
 
 .number.three {
-    top: 50%;
-    left: 93%;
+  top: 50%;
+  left: 93%;
 }
 
 .number.six {
-    top: 92%;
-    left: 50%;
+  top: 92%;
+  left: 50%;
 }
 
 .number.nine {
-    top: 50%;
-    left: 7%;
+  top: 50%;
+  left: 7%;
 }
 
-.centerDot {
-    height: 1.25rem;
-    width: 1.25rem;
-    border-radius: 100%;
-    background-color: beige;
-    position: absolute;
-    top: 48%;
-    left: 47%;
-    z-index: 1;
+.centerDot{
+  height: 1.25rem;
+  width: 1.25rem;
+  border-radius: 100%;
+  border-color: red;
+  border-width: 10px;
+  background-color: beige;
+  position: absolute;
+  top: 48%;
+  left: 47%;
+  z-index: 1;
 }
 
-#buttons .play,
-#buttons .pause {
-    margin: 10px;
-    background: linear-gradient(to right, #373b44, #4286f4);
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    color: #f3f3f3;
-    cursor: pointer;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+#buttons .play {
+  position: absolute;
+  top: 140%;
+  left: 20%;
+  margin-right: 10px; /* Add margin to separate the buttons */
+  z-index: 1;
+  background: linear-gradient(to right, #373b44, #4286f4);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #f3f3f3;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-.stopwatch-container {
-    margin-top: 20px;
-    text-align: center;
+#buttons .pause{
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  margin-right: 10px; /* Add margin to separate the buttons */
+  z-index: 1;
+  background: linear-gradient(to right, #373b44, #4286f4);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #f3f3f3;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
+  
 
-#stopwatch-display {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
+/* #buttons .pause, #buttons .play{
+  position: absolute;
+  top: 170%;
+  left: 30%;
+  z-index: 1;
+  background: linear-gradient(to right, #373b44, #4286f4);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #f3f3f3;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 
-#stopwatch-buttons button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-}
+} */
 
-.timer-container {
-    margin-top: 20px;
-    text-align: center;
-}
-
-#timer-display {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-#timer-buttons button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.timer-container input {
-    width: 60px;
-    padding: 5px;
-    font-size: 1rem;
-    text-align: center;
-    margin: 5px;
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
 }
